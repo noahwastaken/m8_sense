@@ -70,6 +70,9 @@ make -j`grep 'processor' /proc/cpuinfo | wc -l` CROSS_COMPILE=$TOOLCHAIN #>> com
 		cp "${mo}" $m
    done
 
+#DTB Tool
+./dtbToolCM -o arch/arm/boot/dt.img -s 2048 -d "htc,project-id = <" -p ./scripts/dtc/ ./arch/arm/boot/
+
 # Get Build Time
 if [ -z "$OUT_TARGET_HOST" ]
 then
