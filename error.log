@@ -1,0 +1,12 @@
+  CHK     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+  HOSTCC  scripts/basic/fixdep
+make[1]: `include/generated/mach-types.h' is up to date.
+  CC      kernel/bounds.s
+gcc: error: unrecognized argument in option ‘-mabi=aapcs-linux’
+gcc: note: valid arguments to ‘-mabi=’ are: ms sysv
+gcc: error: unrecognized command line option ‘-mlittle-endian’
+gcc: error: unrecognized command line option ‘-mno-thumb-interwork’
+gcc: error: unrecognized command line option ‘-mfpu=neon-vfpv4’
+make[1]: *** [kernel/bounds.s] Error 1
+make: *** [prepare0] Error 2
